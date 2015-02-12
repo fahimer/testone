@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <style>  .ferra{
+                background-image:url("res/b1.jpg");
+                 
+            }
+        </style>
+        <title>Hi and welcome </title>
+    </h:head>
+    <h:body styleClass="ferra">
+        <h1>Hi </h1>
+        <h:outputLabel value="#{acct.init()}"/>
+        <h:form>
+           
+            <h3>Log in</h3>
+            <p>
+                <h:outputLabel for="usename" value ="username: "/>
+                <h:inputText id ="username" value="#{acct.username}"/>
+                <h:outputLabel for ="password" value ="password: "/>
+                <h:inputText id ="password" value="#{acct.password}"/>               
+            </p>
+            <p>
+                <h:commandButton value ="Log in" action ="#{acct.login()}"/>
+            </p>
+            <hr/>
+        </h:form>
+        <h:form>
+            <h3>New account</h3>
+            <p>
+                <h:outputLabel for="usename" value ="username: "/>
+                <h:inputText id ="username" value="#{acct.username}"/>
+                <h:outputLabel for ="password" value ="password: "/>
+                <h:inputText id ="password" value="#{acct.password}"/>
+                <h:outputLabel for ="name" value ="name: "/>
+                <h:inputText id ="name" value="#{acct.name}"/>
+                <h:outputLabel for ="surname" value ="surname: "/>
+                <h:inputText id ="surname" value="#{acct.surname}"/>
+                <h:outputLabel for ="ssn" value ="ssn: "/>
+                <h:inputText id ="ssn" value="#{acct.ssn}"/>
+                <h:outputLabel for ="email" value ="email: "/>
+                <h:inputText id ="email" value="#{acct.email}"/>
+              
+            </p>
+            <p>
+                <h:commandButton value ="new Account" action ="#{acct.newAccount()}"/>
+            </p>
+            
+        </h:form>
+        
+        <p>
+            <h:outputLabel for ="res" value="#{acct.result}"/>
+        </p>
+
+
+    </h:body>
+</html>
+
